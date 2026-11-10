@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>ЛОР – PREMIUM · Доктор Фозилхон Усмонхонов — пациентам из других городов и стран</title>
+<meta name="description" content="Концепт сайта ЛОР-хирурга Фозилхона Усмонхонова (Ташкент) для пациентов, которые приезжают на операцию из Казахстана, Таджикистана, Кыргызстана, России и регионов Узбекистана.">
+<meta name="theme-color" content="#07111f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2306101d%22/%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%224%22 fill=%22%233cf0d4%22/%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%229%22 fill=%22none%22 stroke=%22%233cf0d4%22 stroke-width=%221.6%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+<a class="skip" href="#main" data-i="skip">Перейти к содержанию</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="top" id="top">
+  <a class="brand" href="#main" aria-label="ЛОР – PREMIUM">
+    <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="3.2"/><circle cx="16" cy="16" r="9" fill="none"/><path d="M16 2v5M16 25v5M2 16h5M25 16h5" fill="none"/></svg>
+    <span class="brand__name" data-i="brand">ЛОР – PREMIUM</span>
+  </a>
+  <nav class="nav" data-i-aria="aria.nav" aria-label="Разделы">
+    <a href="#map" data-i="nav.map">Карта</a>
+    <a href="#path" data-i="nav.path">Путь пациента</a>
+    <a href="#prep" data-i="nav.prep">Подготовка</a>
+    <a href="#cases" data-i="nav.cases">Случаи</a>
+    <a href="#training" data-i="nav.training">Обучение</a>
+    <a href="#faq" data-i="nav.faq">Вопросы</a>
+  </nav>
+  <div class="top__end">
+    <div class="lang" role="group" aria-label="Язык / Til">
+      <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+      <button type="button" data-lang="uz" aria-pressed="false">UZ</button>
+    </div>
+    <a class="btn btn--sm btn--line" href="#book" data-i="nav.book">Записаться</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="map" aria-labelledby="h1">
+  <div class="hero__text">
+    <p class="hero__who"><span data-i="hero.who">Доктор Фозилхон Усмонхонов · ЛОР-хирург, Ташкент</span></p>
+    <h1 id="h1" data-i="hero.h1">Операции на ухе, носе и горле в Ташкенте — для тех, кто едет издалека</h1>
+    <p class="hero__lead" data-i="hero.lead">Пришлите МСКТ, аудиограмму и описание жалоб в Instagram Direct или позвоните. Доктор посмотрит материалы и подскажет, есть ли смысл ехать на очный осмотр. Решение об операции принимается только после осмотра.</p>
+    <div class="hero__cta">
+      <a class="btn btn--teal" href="#book" data-i="hero.cta">Отправить снимки на консультацию</a>
+      <a class="btn btn--ghost" href="tel:+998946511163"><span data-i="call">Позвонить</span> <span class="nowrap">+998 94 651-11-63</span></a>
+    </div>
+    <figure class="doc" data-tilt>
+      <video class="doc__v" muted playsinline loop preload="none" poster="media/vp/Dc6PAlkO039_1.jpg" data-autoplay data-i-aria="alt.doc" aria-label="Доктор Фозилхон Усмонхонов">
+        <source src="media/v/Dc6PAlkO039.mp4" type="video/mp4">
+      </video>
+      <figcaption>
+        <strong data-i="hero.docname">Усмонхонов Фозилхон Одилхонович</strong>
+        <span data-i="hero.doccap">Лазерные и эндоскопические операции уха, носа и горла</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="hero__globe">
+    <div class="globe" id="globe" aria-describedby="globe-help">
+      <canvas id="globe-canvas" aria-hidden="true"></canvas>
+      <div class="globe__labels" id="globe-labels"></div>
+      <div class="globe__fallback" id="globe-fallback" hidden></div>
+    </div>
+    <div class="globe__bar">
+      <div class="seg" role="group" data-i-aria="aria.mode" aria-label="Режим карты">
+        <button type="button" class="seg__b" data-mode="in" aria-pressed="true"><i class="dot dot--teal"></i><span data-i="globe.in">Откуда едут пациенты</span></button>
+        <button type="button" class="seg__b" data-mode="out" aria-pressed="false"><i class="dot dot--amber"></i><span data-i="globe.out">Где стажировался доктор</span></button>
+      </div>
+      <p id="globe-help" class="globe__help" data-i="globe.help">Выберите страну — покажем реальные клинические случаи пациентов оттуда.</p>
+      <div class="chips" id="country-chips" role="group" data-i-aria="aria.countries" aria-label="Страны"></div>
+    </div>
+    <aside class="drawer" id="drawer" aria-live="polite" hidden>
+      <div class="drawer__head">
+        <h2 class="drawer__title" id="drawer-title"></h2>
+        <button type="button" class="drawer__x" id="drawer-x" data-i-aria="aria.close" aria-label="Закрыть">×</button>
+      </div>
+      <div class="drawer__list" id="drawer-list"></div>
+      <a class="drawer__more" href="#cases" id="drawer-more" data-i="drawer.more">Все случаи этой страны</a>
+    </aside>
+  </div>
+</section>
+
+<!-- PATH -->
+<section class="path" id="path" aria-labelledby="path-h">
+  <div class="path__stage">
+    <canvas id="path-canvas" aria-hidden="true"></canvas>
+    <div class="path__copy">
+      <h2 id="path-h" data-i="path.h">Путь пациента</h2>
+      <p class="path__intro" data-i="path.intro">Шесть шагов от первого сообщения до наблюдения после возвращения домой. Детали каждого шага — даты, жильё, дорогу — уточняйте при записи.</p>
+      <ol class="steps" id="steps">
+        <li class="step" data-step="0"><span class="step__n">1</span><div><h3 data-i="s1.h">Отправьте снимки и жалобы</h3><p data-i="s1.p">МСКТ, аудиограмма, заключения — в Instagram Direct или по телефону. Опишите, что беспокоит и как давно.</p></div></li>
+        <li class="step" data-step="1"><span class="step__n">2</span><div><h3 data-i="s2.h">Предварительное мнение</h3><p data-i="s2.p">Доктор смотрит материалы и говорит, нужен ли очный осмотр и какие обследования взять с собой. Это не диагноз.</p></div></li>
+        <li class="step" data-step="2"><span class="step__n">3</span><div><h3 data-i="s3.h">Выбор дат</h3><p data-i="s3.p">Согласуйте день приезда и приёма. Доктор регулярно уезжает на стажировки — даты приёма уточняйте при записи.</p></div></li>
+        <li class="step" data-step="3"><span class="step__n">4</span><div><h3 data-i="s4.h">Приезд и осмотр</h3><p data-i="s4.p">Осмотр, эндоскопия и нужные исследования в Ташкенте. Адрес и время приёма сообщают при записи.</p></div></li>
+        <li class="step" data-step="4"><span class="step__n">5</span><div><h3 data-i="s5.h">Операция</h3><p data-i="s5.p">Если операция показана — доктор объясняет её цель, ход и восстановление. Результат зависит от диагноза.</p></div></li>
+        <li class="step" data-step="5"><span class="step__n">6</span><div><h3 data-i="s6.h">Наблюдение и связь из дома</h3><p data-i="s6.p">Порядок контроля доктор объясняет при выписке. Вопросы после возвращения можно задать в Direct или по телефону.</p></div></li>
+      </ol>
+    </div>
+    <div class="path__rail" aria-hidden="true"><i id="path-progress"></i></div>
+  </div>
+</section>
+
+<!-- PREP -->
+<section class="prep sec" id="prep" aria-labelledby="prep-h">
+  <div class="sec__head">
+    <h2 id="prep-h" data-i="prep.h">Подготовка к поездке</h2>
+    <p data-i="prep.p">Отметьте, что у вас уже есть. Список попадёт в сообщение для записи — доктор сразу увидит, каких материалов не хватает.</p>
+  </div>
+  <div class="prep__grid">
+    <form class="prep__form" id="prep-form" onsubmit="return false">
+      <div class="field-row">
+        <label class="field"><span data-i="f.country">Страна</span>
+          <select id="p-country" data-sync="country">
+            <option value="uz" data-i="o.uz">Узбекистан</option>
+            <option value="kz" data-i="o.kz">Казахстан</option>
+            <option value="tj" data-i="o.tj">Таджикистан</option>
+            <option value="kg" data-i="o.kg">Кыргызстан</option>
+            <option value="ru" data-i="o.ru">Россия</option>
+            <option value="other" data-i="o.other">Другая страна</option>
+          </select>
+        </label>
+        <label class="field"><span data-i="f.city">Город</span><input id="p-city" data-sync="city" type="text" autocomplete="address-level2" placeholder="Актау, Душанбе, Нукус…" data-i-ph="f.cityph"></label>
+      </div>
+      <fieldset class="checks" id="checks">
+        <legend data-i="prep.l1">Документы и снимки</legend>
+      </fieldset>
+      <p class="prep__note" data-i="prep.note">Точный список обследований зависит от жалоб — уточняйте при записи.</p>
+    </form>
+    <div class="ticket" id="ticket" aria-live="polite">
+      <div class="ticket__ring"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" class="ring-bg"/><circle cx="60" cy="60" r="52" class="ring-fg" id="ring-fg"/></svg><b id="ring-num">0/0</b></div>
+      <div class="ticket__route"><span id="t-from">—</span><svg viewBox="0 0 80 12" aria-hidden="true"><path d="M2 6h70" /><path d="M66 1l7 5-7 5"/></svg><span data-i="tashkent">Ташкент</span></div>
+      <ul class="ticket__list" id="t-list"></ul>
+      <a class="btn btn--teal btn--block" href="#book" id="to-book" data-i="prep.go">Перенести в сообщение для записи</a>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases sec" id="cases" aria-labelledby="cases-h">
+  <div class="sec__head">
+    <h2 id="cases-h" data-i="cases.h">Клинические случаи по странам</h2>
+    <p data-i="cases.p">Видео и публикации доктора о пациентах, которые приезжали в Ташкент. Материалы публикуются с согласия пациентов. Каждый случай индивидуален.</p>
+  </div>
+  <div class="tabs" role="tablist" id="case-tabs" data-i-aria="aria.countries" aria-label="Страны"></div>
+  <div class="wall" id="wall">
+    <div class="wall__track" id="wall-track"></div>
+  </div>
+  <div class="wall__nav">
+    <button type="button" class="round" id="wall-prev" data-i-aria="aria.prev" aria-label="Назад">‹</button>
+    <button type="button" class="round" id="wall-next" data-i-aria="aria.next" aria-label="Вперёд">›</button>
+    <p class="wall__consent" data-i="consent">Материалы публикуются с согласия пациентов</p>
+  </div>
+</section>
+
+<!-- TRAINING -->
+<section class="training sec" id="training" aria-labelledby="tr-h">
+  <div class="sec__head">
+    <h2 id="tr-h" data-i="tr.h">Где учился и стажируется доктор</h2>
+    <p data-i="tr.p">По постам доктора: каждый месяц — обязательные стажировки за рубежом, в Европе, Индии и России. На карте выше это оранжевые линии из Ташкента.</p>
+  </div>
+  <ol class="tl" id="tl">
+    <li class="tl__i" data-geo="kirov">
+      <img loading="lazy" src="media/hl/about_03.jpg" data-i-alt="alt.tr1" alt="Доктор с коллегами в Кировской областной клинической больнице">
+      <div><h3 data-i="tr1.h">Россия, Киров</h3><p data-i="tr1.p">Кировская областная клиническая больница, отделение оториноларингологии и хирургии основания черепа. Кировский государственный медицинский университет.</p></div>
+    </li>
+    <li class="tl__i" data-geo="moscow">
+      <img loading="lazy" src="media/hl/about_07.jpg" data-i-alt="alt.tr2" alt="Стажировка у профессора С. Я. Косякова, Москва">
+      <div><h3 data-i="tr2.h">Россия, Москва</h3><p data-i="tr2.p">Стажировка в ФНКЦ оториноларингологии ФМБА России и РМАНПО у профессора С. Я. Косякова. Встреча с профессором Г. З. Пискуновым — пионером эндоскопической ринохирургии в России.</p></div>
+    </li>
+    <li class="tl__i" data-geo="antalya">
+      <img loading="lazy" src="media/hl/about_11.jpg" data-i-alt="alt.tr3" alt="Логотипы учреждений: Akdeniz University, РМАНПО, Кировский ГМУ">
+      <div><h3 data-i="tr3.h">Турция, Анталья</h3><p data-i="tr3.p">Akdeniz University.</p></div>
+    </li>
+    <li class="tl__i" data-geo="graz">
+      <div class="tl__type" aria-hidden="true">Graz</div>
+      <div><h3 data-i="tr4.h">Австрия, Грац · июль 2026</h3><p data-i="tr4.p">Стажировка в школе Хайнца Штаммбергера и Мессерклингера — родине функциональной эндоскопической хирургии пазух.</p></div>
+    </li>
+    <li class="tl__i" data-geo="trichy">
+      <img loading="lazy" src="media/hl/about_38.jpg" data-i-alt="alt.tr5" alt="Доктор с хирургом Н. Джанакирамом, Тричи, Индия">
+      <div><h3 data-i="tr5.h">Индия, Тричи · 1–9 августа 2026</h3><p data-i="tr5.p">Стажировка у Н. Джанакирама, хирурга основания черепа.</p></div>
+    </li>
+    <li class="tl__i" data-geo="istanbul">
+      <video loading="lazy" muted playsinline loop preload="none" poster="media/vp/Dc6PAlkO039_5.jpg" data-autoplay><source src="media/v/Dc6PAlkO039.mp4" type="video/mp4"></video>
+      <div><h3 data-i="tr6.h">Турция, Стамбул · сентябрь 2026</h3><p data-i="tr6.p">Всемирный конгресс оториноларингологов, доклад по хирургии уха.</p></div>
+    </li>
+    <li class="tl__i" data-geo="piacenza">
+      <img loading="lazy" src="media/hl/italy_08.jpg" data-i-alt="alt.tr7" alt="Доктор на хирургическом курсе в Пьяченце, Италия">
+      <div><h3 data-i="tr7.h">Италия, Пьяченца · 4–11 октября 2026</h3><p data-i="tr7.p">Школа профессора Марио Санны — хирургия основания черепа.</p></div>
+    </li>
+    <li class="tl__i" data-geo="tashkent">
+      <img loading="lazy" src="media/hl/about_29.jpg" data-i-alt="alt.tr8" alt="Профессор Вольф Манн и доктор в Ташкенте">
+      <div><h3 data-i="tr8.h">Ташкент</h3><p data-i="tr8.p">Визит профессора Вольфа Манна (Германия). Бренд «ЛОР – PREMIUM» — зарегистрированный товарный знак, свидетельство № MGU 57238.</p></div>
+    </li>
+  </ol>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews sec" id="reviews" aria-labelledby="rv-h">
+  <div class="sec__head">
+    <h2 id="rv-h" data-i="rv.h">Истории пациентов</h2>
+    <p data-i="rv.p">Скриншоты сообщений из раздела «Отзывы» в Instagram доктора — без правок. Листайте или перетаскивайте.</p>
+  </div>
+  <div class="ring" id="ring" tabindex="0" aria-roledescription="carousel" data-i-aria="aria.reviews" aria-label="Отзывы пациентов">
+    <div class="ring__stage" id="ring-stage"></div>
+  </div>
+  <div class="wall__nav wall__nav--c">
+    <button type="button" class="round" id="ring-prev" data-i-aria="aria.prev" aria-label="Назад">‹</button>
+    <span class="ring__count" id="ring-count">1 / 16</span>
+    <button type="button" class="round" id="ring-next" data-i-aria="aria.next" aria-label="Вперёд">›</button>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="book sec" id="book" aria-labelledby="bk-h">
+  <div class="sec__head">
+    <h2 id="bk-h" data-i="bk.h">Сообщение для записи</h2>
+    <p data-i="bk.p">Заполните поля — текст соберётся сам. Отправьте его в Instagram Direct вместе с файлами МСКТ и аудиограммы или прочитайте по телефону.</p>
+  </div>
+  <div class="book__grid">
+    <form class="book__form" id="book-form" onsubmit="return false">
+      <div class="field-row">
+        <label class="field"><span data-i="f.name">Имя</span><input id="b-name" type="text" autocomplete="name"></label>
+        <label class="field"><span data-i="f.phone">Телефон</span><input id="b-phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 / +992 / +996 / +998"></label>
+      </div>
+      <div class="field-row">
+        <label class="field"><span data-i="f.country">Страна</span>
+          <select id="b-country" data-sync="country">
+            <option value="uz" data-i="o.uz">Узбекистан</option>
+            <option value="kz" data-i="o.kz">Казахстан</option>
+            <option value="tj" data-i="o.tj">Таджикистан</option>
+            <option value="kg" data-i="o.kg">Кыргызстан</option>
+            <option value="ru" data-i="o.ru">Россия</option>
+            <option value="other" data-i="o.other">Другая страна</option>
+          </select>
+        </label>
+        <label class="field"><span data-i="f.city">Город</span><input id="b-city" data-sync="city" type="text" placeholder="Актау, Душанбе, Нукус…" data-i-ph="f.cityph"></label>
+      </div>
+      <fieldset class="pills" id="b-area">
+        <legend data-i="f.area">Что беспокоит</legend>
+        <label><input type="radio" name="area" value="ear" checked><span data-i="a.ear">Ухо, слух</span></label>
+        <label><input type="radio" name="area" value="nose"><span data-i="a.nose">Нос, пазухи</span></label>
+        <label><input type="radio" name="area" value="throat"><span data-i="a.throat">Горло</span></label>
+        <label><input type="radio" name="area" value="unsure"><span data-i="a.unsure">Не знаю</span></label>
+      </fieldset>
+      <label class="field"><span data-i="f.desc">Коротко о жалобах</span><textarea id="b-desc" rows="3" data-i-ph="f.descph" placeholder="Например: снижение слуха на правое ухо 3 года, раньше была операция"></textarea></label>
+      <label class="field"><span data-i="f.when">Когда планируете приехать</span><input id="b-when" type="text" data-i-ph="f.whenph" placeholder="Например: вторая половина декабря"></label>
+      <fieldset class="pills" id="b-contact">
+        <legend data-i="f.contact">Как с вами связаться</legend>
+        <label><input type="radio" name="contact" value="call" checked><span data-i="c.call">Звонок</span></label>
+        <label><input type="radio" name="contact" value="ig"><span data-i="c.ig">Instagram Direct</span></label>
+      </fieldset>
+    </form>
+    <div class="msg">
+      <div class="msg__head"><span class="msg__ava" aria-hidden="true">ЛП</span><div><b>dr.fozilkhon</b><small data-i="bk.preview">Предпросмотр сообщения</small></div></div>
+      <pre class="msg__body" id="msg" aria-live="polite"></pre>
+      <div class="msg__act">
+        <a class="btn btn--teal" href="tel:+998946511163"><span data-i="call">Позвонить</span></a>
+        <button type="button" class="btn btn--line" id="copy" data-i="copy">Скопировать текст</button>
+        <a class="btn btn--line" id="ig" href="https://ig.me/m/dr.fozilkhon" target="_blank" rel="noopener" data-i="ig">Открыть Instagram Direct</a>
+      </div>
+      <p class="msg__hint" data-i="bk.hint">Кнопка Instagram сначала копирует текст — вставьте его в чат и прикрепите файлы снимков.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq sec" id="faq" aria-labelledby="faq-h">
+  <div class="sec__head"><h2 id="faq-h" data-i="faq.h">Вопросы тех, кто едет издалека</h2></div>
+  <div class="faq__list">
+    <details><summary data-i="q1">Можно ли получить мнение до поездки?</summary><p data-i="a1">Да, можно прислать МСКТ, аудиограмму и описание жалоб в Instagram Direct или позвонить. Предварительное мнение по снимкам не заменяет осмотр: окончательное решение принимается только после очной консультации.</p></details>
+    <details><summary data-i="q2">Какие снимки и обследования нужны?</summary><p data-i="a2">Зависит от жалоб. При проблемах со слухом часто нужны аудиограмма и МСКТ височных костей, при проблемах с носом — МСКТ околоносовых пазух. Точный список уточняйте при записи.</p></details>
+    <details><summary data-i="q3">Сколько дней нужно провести в Ташкенте?</summary><p data-i="a3">Это зависит от диагноза и объёма лечения и определяется после осмотра. Уточняйте при записи.</p></details>
+    <details><summary data-i="q4">Помогаете ли с жильём и дорогой из аэропорта?</summary><p data-i="a4">Эти вопросы уточняйте при записи — на сайте мы не обещаем того, что не подтверждено.</p></details>
+    <details><summary data-i="q5">Сколько стоит операция?</summary><p data-i="a5">Стоимость зависит от диагноза и объёма вмешательства и называется после осмотра. Уточняйте при записи.</p></details>
+    <details><summary data-i="q6">Как проходит наблюдение после возвращения домой?</summary><p data-i="a6">Порядок контроля доктор объясняет при выписке. Вопросы можно задать в Instagram Direct или по телефону.</p></details>
+    <details><summary data-i="q7">Где находится клиника?</summary><p data-i="a7">В Ташкенте. Точный адрес и время приёма сообщают при записи.</p></details>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__row">
+    <div>
+      <p class="foot__brand" data-i="brand">ЛОР – PREMIUM</p>
+      <p data-i="foot.doc">Усмонхонов Фозилхон Одилхонович, ЛОР-хирург</p>
+      <p data-i="foot.city">Ташкент · адрес и время приёма — при записи</p>
+    </div>
+    <div class="foot__links">
+      <a href="tel:+998946511163">+998 94 651-11-63</a>
+      <a href="https://ig.me/m/dr.fozilkhon" target="_blank" rel="noopener">Instagram @dr.fozilkhon</a>
+    </div>
+  </div>
+  <p class="foot__warn" data-i="foot.warn">Имеются противопоказания. Необходима консультация специалиста. Материалы публикуются с согласия пациентов.</p>
+  <p class="foot__concept" data-i="foot.concept">Концепт сайта · Lumagen</p>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lb-t">
+  <div class="lb__box">
+    <button type="button" class="lb__x" id="lb-x" data-i-aria="aria.close" aria-label="Закрыть">×</button>
+    <div class="lb__media" id="lb-media"></div>
+    <div class="lb__txt"><p class="lb__place" id="lb-place"></p><h3 id="lb-t"></h3><p id="lb-d"></p><p class="lb__note" data-i="lb.note">Клинический случай. Результат зависит от диагноза; решение — после осмотра.</p></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
